@@ -31,6 +31,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        desktop = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -50,6 +51,19 @@ public class TelaPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Principal - Auto Moto Escola Fátima");
         setResizable(false);
+
+        desktop.setPreferredSize(new java.awt.Dimension(1262, 570));
+
+        javax.swing.GroupLayout desktopLayout = new javax.swing.GroupLayout(desktop);
+        desktop.setLayout(desktopLayout);
+        desktopLayout.setHorizontalGroup(
+            desktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1262, Short.MAX_VALUE)
+        );
+        desktopLayout.setVerticalGroup(
+            desktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 564, Short.MAX_VALUE)
+        );
 
         jMenuBar1.setFont(new java.awt.Font("Symbol", 0, 18)); // NOI18N
 
@@ -73,7 +87,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenu2.add(jMenu5);
 
-        jMenu6.setText("Consultar");
+        jMenu6.setText("Consultar/Editar");
         jMenu6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
         jMenuItem7.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
@@ -101,7 +115,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenu3.add(jMenuItem1);
 
         jMenuItem2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jMenuItem2.setText("Consultar");
+        jMenuItem2.setText("Consultar/Editar");
         jMenu3.add(jMenuItem2);
 
         jMenuBar1.add(jMenu3);
@@ -125,19 +139,22 @@ public class TelaPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1280, Short.MAX_VALUE)
+            .addComponent(desktop, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 601, Short.MAX_VALUE)
+            .addComponent(desktop, javax.swing.GroupLayout.DEFAULT_SIZE, 564, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(1280, 650));
+        setSize(new java.awt.Dimension(1280, 640));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
+        TelaCadastroAlunos cadastroAlunos = new TelaCadastroAlunos();
+        cadastroAlunos.setVisible(true);
+        desktop.add(cadastroAlunos);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
@@ -176,6 +193,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JDesktopPane desktop;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
